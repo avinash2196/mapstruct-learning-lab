@@ -5,8 +5,8 @@
  */
 package org.example.util;
 
-import org.example.model.Car;
-import org.example.model.CarDto;
+import org.example.model.second.CarDto;
+import org.example.model.testing.SecondNestedLevel1;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  *
- * @author Sjaak Derksen
+ * @author avinash
  */
 @Component
 public class IterableNonIterableUtil {
