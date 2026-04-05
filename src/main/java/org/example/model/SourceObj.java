@@ -1,15 +1,15 @@
 package org.example.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class SourceObj {
 
     private String myString;
-
-    public String getMyString() {
-        return myString;
-    }
-
-    public void setMyString(String myString) {
-        this.myString = myString;
-    }
-
 }

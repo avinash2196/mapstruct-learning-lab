@@ -29,13 +29,16 @@ org\example\mapper\ObjWithArrayMapperImpl.class
 org\example\model\TargetObjectWrapper$TargetObjectWrapperBuilder.class
 org\example\model\Target1.class
 org\example\model\Source1$Source1Builder.class
+org\example\controller\MappingDemoController.class
 org\example\mapper\TestMapper.class
 org\example\model\Source1.class
+org\example\model\SourceObj$SourceObjBuilder.class
 org\example\model\Teacher$TeacherBuilder.class
 org\example\model\Object2WithArray$Object2WithArrayBuilder.class
 org\example\model\CarDto$CarDtoBuilder.class
 org\example\model\SourceObj.class
 org\example\model\SourceObjectLevel2Obj2.class
+org\example\model\TargetObj$TargetObjBuilder.class
 org\example\model\Car.class
 org\example\util\IterableNonIterableUtil.class
 org\example\mapper\ListToStringMapper.class
@@ -44,7 +47,6 @@ org\example\model\SourceObject.class
 org\example\mapper\TestMapperImpl.class
 org\example\model\Student$StudentBuilder.class
 org\example\model\Student.class
-org\example\Controller.class
 org\example\mapper\NoIterableToIterableMapperImpl.class
 org\example\model\Source$SourceBuilder.class
 org\example\mapper\ObjMapper.class

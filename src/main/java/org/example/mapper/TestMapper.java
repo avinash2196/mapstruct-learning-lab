@@ -12,6 +12,33 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * TestMapper — demonstrates {@code @MappingTarget} for updating an existing
+ * object and combining data from two source objects into one target.
+ *
+ * <p><b>Problem being solved:</b><br>
+ * A {@link TargetStudent} record needs to contain data from <em>both</em> a
+ * {@link Student} <em>and</em> its associated {@link Teacher}. Neither
+ * MapStruct's standard mapping nor a single-source mapper can express this
+ * directly.</p>
+ *
+ * <p><b>Concept: @MappingTarget — update-in-place</b><br>
+ * {@link #updateTargetStudentFromTeacher} does not return a new object; instead
+ * it <em>mutates</em> an existing {@link TargetStudent} passed as
+ * {@code @MappingTarget}. This is MapStruct's idiomatic pattern for merging a
+ * second source into an already-mapped target.</p>
+ *
+ * <p><b>Concept: ignored fields</b><br>
+ * Each mapping method declares {@code ignore = true} for fields it does not own,
+ * ensuring one method's mapping does not accidentally overwrite the other's
+ * output.</p>
+ *
+ * <p><b>Concept: default method for orchestration</b><br>
+ * {@link #toTargetStudents} is a {@code default} method that orchestrates the
+ * two individual mapping methods. MapStruct cannot generate this aggregation
+ * automatically because it involves iterating a list from an object that is not
+ * a direct source collection.</p>
+ */
 @Mapper(componentModel = "spring")
 public interface TestMapper {
     @Mappings({
